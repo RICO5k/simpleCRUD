@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,18 +11,20 @@
     <title>CRUD with login project</title>
 </head>
 <body>
+    <%=  request.getAttribute("error") == null ? "" : request.getAttribute("error") %>
     <div id="container" class="d-flex justify-content-center align-items-center">
-        <form action="" method="post" class="text-center border shadow-lg rounded p-5">
+        <form action="login" method="post" class="text-center border shadow-lg rounded p-5">
             <div class="form-group">
                 <label class="col-form-label col-form-label-lg">Username:</label>
-                <input type="text" name="username" class="form-control form-control">
+                <input type="text" name="username" class="form-control form-control" value="<%= session.getAttribute("username") == null ? "" : session.getAttribute("username") %>">
             </div>
             <div class="form-group">
                 <label class="col-form-label col-form-label-lg">Password:</label>
-                <input type="text" name="password" class="form-control">
+                <input type="password" name="password" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
     </div>
 </body>
 </html>
