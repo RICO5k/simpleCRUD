@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="container" class="d-flex justify-content-center align-items-center">
-
+        <a href="logout">logout</a>
     </div>
 </body>
 </html>
