@@ -1,0 +1,19 @@
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #6426c0;
+}
+
+form {
+    background-color: #ffffff;
+}
+
+.btn {
+    background-color: #6426c0;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #6436c0;
+    color: white;
+}
