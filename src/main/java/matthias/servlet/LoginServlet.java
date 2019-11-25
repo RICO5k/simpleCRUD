@@ -18,7 +18,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
                 session.setAttribute("username", username);
 
                 if(username.isEmpty() || password.isEmpty()) {
-                    request.setAttribute("error", "<div class='alert alert-danger text-center fixed-top'>Please fill all fields</div>");
+                    request.setAttribute("error", "<div class='error'>Please fill all fields</div>");
                     getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
                     return;
         }
