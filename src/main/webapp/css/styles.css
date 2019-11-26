@@ -26,3 +26,11 @@
     text-align: center;
     padding: 15px 0;
 }
+
+.fullwidth {
+    width: 100%;
+}
+
+thead {
+    font-weight: bold;
+}
