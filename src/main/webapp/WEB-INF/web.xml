@@ -5,13 +5,37 @@
 <web-app>
 
   <context-param>
-    <param-name>login</param-name>
+    <param-name>appLogin</param-name>
     <param-value>admin</param-value>
   </context-param>
 
   <context-param>
-    <param-name>password</param-name>
+    <param-name>appPassword</param-name>
     <param-value>admin</param-value>
   </context-param>
+
+  <context-param>
+    <param-name>jdbcHost</param-name>
+    <param-value>jdbc:mysql://localhost:3306/peopledb</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>jdbcLogin</param-name>
+    <param-value>root</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>jdbcPassword</param-name>
+    <param-value>root</param-value>
+  </context-param>
+
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
 
 </web-app>

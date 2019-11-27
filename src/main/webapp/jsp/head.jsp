@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="css/styles.css?1.2">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css" type="text/css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>myCRUD</title>
 </head>

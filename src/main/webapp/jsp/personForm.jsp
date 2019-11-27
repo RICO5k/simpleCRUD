@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
-<%@include file="jsp/head.jsp"%>
+<%@include file="head.jsp"%>
 <body>
     <div id="container" class="flex-center">
-        <form action="add" method="post" class="mdl-card  mdl-shadow--6dp" onsubmit="return validateForm()">
+        <form action="http://localhost:8080/CRUDLogin_war/addServlet" method="post" class="mdl-card  mdl-shadow--6dp" onsubmit="return validateForm()">
             <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
                 <h2 class="mdl-card__title-text">Add New User</h2>
             </div>
