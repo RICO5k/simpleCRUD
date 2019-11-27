@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ManagementController", description = "management controller", urlPatterns = {"/management/*"} )
 
@@ -27,16 +28,14 @@ public class ManagementController extends HttpServlet {
         }
 
         String path = "" + request.getPathInfo();
-
         switch(path) {
             case "/add": request.getRequestDispatcher("/jsp/personForm.jsp").forward(request, response); return;
             case "/remove": request.getRequestDispatcher("/removeServlet").forward(request, response); return;
-            case "/update": request.getRequestDispatcher("/updateServlet").forward(request, response); return;
+            case "/update": request.getRequestDispatcher("/jsp/personForm.jsp?id=" + request.getParameter("id")).forward(request, response); return;
             case "/logout": request.getRequestDispatcher("/logoutServlet").forward(request, response); return;
         }
 
-        request.getRequestDispatcher("/jsp/management.jsp").forward(request, response);
-
+        request.getRequestDispatcher("viewServlet").forward(request, response);
     }
 }
 

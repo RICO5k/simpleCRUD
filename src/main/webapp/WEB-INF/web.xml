@@ -14,21 +14,6 @@
     <param-value>admin</param-value>
   </context-param>
 
-  <context-param>
-    <param-name>jdbcHost</param-name>
-    <param-value>jdbc:mysql://localhost:3306/peopledb</param-value>
-  </context-param>
-
-  <context-param>
-    <param-name>jdbcLogin</param-name>
-    <param-value>root</param-value>
-  </context-param>
-
-  <context-param>
-    <param-name>jdbcPassword</param-name>
-    <param-value>root</param-value>
-  </context-param>
-
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.js</url-pattern>

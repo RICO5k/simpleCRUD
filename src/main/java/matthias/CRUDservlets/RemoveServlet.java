@@ -1,5 +1,7 @@
 package matthias.CRUDservlets;
 
+import matthias.dao.PersonDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +13,10 @@ import java.io.IOException;
 
 public class RemoveServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
 
+        PersonDao.removePerson(id);
+
+        request.getRequestDispatcher("management").forward(request, response);
     }
 }

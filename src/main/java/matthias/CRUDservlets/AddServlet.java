@@ -1,5 +1,8 @@
 package matthias.CRUDservlets;
 
+import matthias.beans.Person;
+import matthias.dao.PersonDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +16,16 @@ public class AddServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Person person = new Person();
+
+        person.setFirstName(request.getParameter("firstName"));
+        person.setLastName(request.getParameter("lastName"));
+        person.setAge(Integer.parseInt(request.getParameter("age")));
+        person.setSex(request.getParameter("sex"));
+        person.setCountry(request.getParameter("country"));
+
+        PersonDao.addPerson(person);
+
         response.sendRedirect("management");
     }
 }
